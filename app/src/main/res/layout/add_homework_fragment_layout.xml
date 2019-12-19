@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#FFFFFF"
+    android:clickable="true"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/week_tv_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:layout_marginTop="32dp"
+        android:text="Week: "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/week_et_fragment"
+        app:layout_constraintBottom_toTopOf="@+id/day_tv_fragment"
+        />
+
+    <EditText
+        android:id="@+id/week_et_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="Number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/week_tv_fragment"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/day_et_fragment"
+        />
+
+    <TextView
+        android:id="@+id/day_tv_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Day: "
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/day_et_fragment"
+        app:layout_constraintTop_toBottomOf="@+id/week_tv_fragment"
+        app:layout_constraintBottom_toTopOf="@+id/subject_tv_fragment"/>
+
+    <EditText
+        android:id="@+id/day_et_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="Number 1-5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/day_tv_fragment"
+        app:layout_constraintTop_toBottomOf="@+id/week_et_fragment"
+        app:layout_constraintBottom_toTopOf="@+id/subject_tv_fragment"/>
+
+    <TextView
+        android:id="@+id/subject_tv_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Subject: "
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@+id/day_et_fragment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/subject_et_fragment"
+        />
+
+    <EditText
+        android:id="@+id/subject_et_fragment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Subject "
+        android:layout_margin="16dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/completed_tv_fragment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subject_tv_fragment" />
+
+    <TextView
+        android:id="@+id/completed_tv_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Completed: "
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@+id/subject_et_fragment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/completed_et_fragment"
+        app:layout_constraintBottom_toTopOf="@+id/save_button_fragment"/>
+
+    <EditText
+        android:id="@+id/completed_et_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="true | false"
+        app:layout_constraintStart_toEndOf="@+id/completed_tv_fragment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/save_button_fragment"
+        app:layout_constraintTop_toBottomOf="@+id/subject_et_fragment"
+        />
+
+    <Button
+        android:id="@+id/save_button_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/completed_tv_fragment" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
