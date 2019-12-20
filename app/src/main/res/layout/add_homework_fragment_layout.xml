@@ -89,19 +89,32 @@
         android:textSize="24sp"
         app:layout_constraintTop_toBottomOf="@+id/subject_et_fragment"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/completed_et_fragment"
+        app:layout_constraintEnd_toStartOf="@+id/radio_group_fragment"
         app:layout_constraintBottom_toTopOf="@+id/save_button_fragment"/>
 
-    <EditText
-        android:id="@+id/completed_et_fragment"
+    <RadioGroup
+        android:id="@+id/radio_group_fragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="true | false"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
         app:layout_constraintStart_toEndOf="@+id/completed_tv_fragment"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/save_button_fragment"
         app:layout_constraintTop_toBottomOf="@+id/subject_et_fragment"
-        />
+        >
+        <RadioButton
+            android:id="@+id/radioButton_true_fragment"
+            android:text="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:id="@+id/radioButton_false_fragment"
+            android:text="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RadioGroup>
 
     <Button
         android:id="@+id/save_button_fragment"

@@ -48,4 +48,59 @@ public class MainPresenter implements Contract.HomeworkPresenter {
         else
             homeworkView.displayHomework(homework);
     }
+
+    @Override
+    public void getday1() {
+        homework = homeworkDatabase.homeworkDAO().getday1Homework();
+
+        if(homework.isEmpty())
+            homeworkView.homeworkIsEmpty();
+        else
+            homeworkView.displayHomework(homework);
+
+    }
+
+    @Override
+    public void getday2() {
+        homework = homeworkDatabase.homeworkDAO().getday2Homework();
+
+        if(homework.isEmpty())
+            homeworkView.homeworkIsEmpty();
+        else
+            homeworkView.displayHomework(homework);
+
+    }
+
+    @Override
+    public void getday3() {
+        homework = homeworkDatabase.homeworkDAO().getday3Homework();
+
+        if(homework.isEmpty())
+            homeworkView.homeworkIsEmpty();
+        else
+            homeworkView.displayHomework(homework);
+
+    }
+
+    @Override
+    public void getday4() {
+        homework = homeworkDatabase.homeworkDAO().getday4Homework();
+
+        if(homework.isEmpty())
+            homeworkView.homeworkIsEmpty();
+        else
+            homeworkView.displayHomework(homework);
+
+    }
+
+    @Override
+    public void getday5() {
+        homework = homeworkDatabase.homeworkDAO().getday5Homework();
+
+        if(homework.isEmpty())
+            homeworkView.homeworkIsEmpty();
+        else
+            homeworkView.displayHomework(homework);
+
+    }
 }
